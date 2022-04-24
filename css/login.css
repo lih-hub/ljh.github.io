@@ -1,0 +1,177 @@
+@charset "UTF-8";
+/**!
+ * 登录页
+ * date:2022-03-15
+ * author: liujihua
+ */
+html,
+body {
+  font-family: SHR;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: url("../images/login-bg.png") no-repeat center;
+}
+
+.login {
+  width: 1151px;
+  margin: 0 auto 0 auto;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.login-tit {
+  height: 37px;
+  line-height: 37px;
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 150px;
+  padding: 0 15px;
+  color: #fff;
+  letter-spacing: 4px;
+  text-shadow: 0px 5px 8px rgba(0, 101, 174, 0.7);
+}
+
+.login-mod {
+  height: 494px;
+  background: url("../images/login.png") no-repeat center;
+}
+
+.login-box {
+  width: 514px;
+  margin: 80px 0;
+  padding: 0 100px;
+  box-sizing: border-box;
+}
+
+.login .method {
+  color: #fff;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+.login .method-item {
+  float: left;
+  height: 43px;
+  line-height: 43px;
+  border: 1px solid transparent;
+  padding: 0 40px;
+  margin: 0 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.login .method-item:hover, .login .method-item.active {
+  background-color: rgba(175, 239, 255, 0.3);
+  border: 1px solid #fff;
+  border-radius: 22px;
+  box-sizing: border-box;
+}
+
+.login-put {
+  width: 100%;
+  height: 40px;
+  background: #fff;
+  border-radius: 20px;
+  outline: none;
+  padding: 0 45px;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+}
+
+.login-put:focus {
+  border: 1px solid #486BF7;
+}
+
+.login .input-mod {
+  width: 314px;
+  height: 40px;
+  background: #fff;
+  border-radius: 20px;
+  margin: 15px auto;
+  position: relative;
+}
+
+.login .input-mod:before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.login .input-mod.account {
+  margin: 30px auto;
+}
+
+.login .input-mod.account:before {
+  background-image: url("../images/login-account.png");
+}
+
+.login .input-mod.password:before {
+  background-image: url("../images/login-pwd.png");
+}
+
+.login-state {
+  width: 314px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.login-state .again {
+  height: 15px;
+  line-height: 15px;
+}
+
+.login-state .forget-password {
+  padding-left: 25px;
+  height: 15px;
+  line-height: 15px;
+  position: relative;
+}
+
+.login-state .forget-password .check-btn {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 2px;
+  border: 1px solid #B8DFFA;
+  border-radius: 2px;
+}
+
+.login-state .forget-password .check-btn.check {
+  border: 0;
+  background-image: url("../images/login-check.png");
+}
+
+.login-in {
+  width: 314px;
+  height: 50px;
+  display: block;
+  background-color: #486BF7;
+  text-align: center;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 30px auto 0 auto;
+  color: #FEFEFE;
+  outline: none;
+  border: 0;
+}
+
+.login-in:hover {
+  background-color: #3c8aff;
+}
+
+.login-refer {
+  position: absolute;
+  bottom: 8%;
+  width: 242px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: #FFFEFE;
+}

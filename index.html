@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="./js/libs/jquery-1.12.min.js"></script>
+    <title>首页</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container clearfix">
+            <h2 class="header-tit">江苏省二级建造师继续教育公共知识学习平台</h2>
+            <div class="header-state">
+                <a class="header-exit" href="javascript:;">退出</a>
+                <p class="header-logined">欢迎你，<a href="javascript:;">张山海</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="container learn-container">
+        <div class="search">
+            <input type="text" class="search-put" placeholder="搜索">
+            <i class="search-btn"></i>
+        </div>
+        <ul class="learn-state clearfix">
+            <li class="state-item" data-guid="all">全部</li>
+            <li class="state-item" data-guid="nostart">未开始</li>
+            <li class="state-item" data-guid="being">学习中</li>
+            <li class="state-item" data-guid="finish">已完成</li>
+        </ul>
+        <ul class="learn-list" id="learnList">
+
+        </ul>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="footer-text">
+                <span class="text">版权所有©江苏省建设教育协会</span>
+                <span class="text">地址：南京市南通路118号茂悦港5号楼8楼</span>
+                <span class="text">邮编：210036</span>
+                <span class="text">苏ICP备17047788号</span>
+                <span class="text">苏公安备：32010602010975号</span>
+            </div>
+        </div>
+    </div>
+    <!-- 饼图 -->
+    <script type="text/x-template" id="item-Tmpl">
+        {{#.}}
+         <li class="learn-item {{type}}">
+             <div class="clearfix">
+                 <div class="learn-pic">
+                    <img src="{{href}}" alt="" />
+                 </div>
+                 <div class="learn-content">
+                     <div class="learn-content-refer">
+                         <h3 class="content-tit text-overflow">
+                            {{title}}
+                         </h3>
+                         <div class="content-tit">
+                             <span class="content-refer text-overflow ">
+                                 {{refer}}
+                             </span>
+                             <ul class="refer-state clearfix">
+                                 <li class="refer-item hours">
+                                     总学时:
+                                     <span class="refer-num">{{totlearn}}</span>
+                                 </li>
+                                 <li class="refer-item course">
+                                     课程数:
+                                     <span class="refer-num">{{coursetot}}</span>
+                                 </li>
+                             </ul>
+                         </div>
+                     </div>
+                     <div class="learn-chart clearfix">
+                         <div class="chart">
+                             <div class="chart-progress" id="progress-{{guid}}">
+
+                             </div>
+                             <span class="chart-state {{type}}">{{name}}</span>
+                         </div>
+                         <div class="chart-refer clearfix">
+                             <p class="chart-refer-item timefinish">
+                                 已学:
+                                 <span class="learn-num {{type}}">{{finishlearn}}</span>
+                             </p>
+                             <p class="chart-refer-item">
+                                 上次学习时间:
+                                 <span class="learn-time">{{prevlearntime}}</span>
+                             </p>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </li>
+        {{/.}}    
+    </script>
+    <script src="js/libs/mock.min.js"></script>
+    <script src="./_test/test_index.js"></script>
+    <!-- 工具js -->
+    <script src="./js/libs/mustache.min.js"></script>
+    <script src="js/libs/echarts4.1.0.min.js"></script>
+    <script src="js/libs/util.f9x.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,247 @@
+@charset "UTF-8";
+/**!
+ * 江苏省继续教育培训系统
+ * date:2022-03-15
+ * author: liujihua
+ */
+body {
+  font-family: SHR;
+  background-color: #f9f9f9;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.search {
+  margin: 24px auto 0 auto;
+  width: 880px;
+  height: 61px;
+  position: relative;
+}
+
+.search-put {
+  display: block;
+  width: 880px;
+  height: 51px;
+  background: #fff;
+  box-shadow: -3px 3px 5px 1px rgba(219, 219, 219, 0.25);
+  border-radius: 51px 51px 51px 51px;
+  border: 1px solid #4698FD;
+  padding: 0 53px 0 32px;
+  outline: none;
+}
+
+.search-btn {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  background: url("../images/search.png") no-repeat;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.learn-container {
+  position: absolute;
+  top: 78px;
+  bottom: 85px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.learn-state {
+  margin: 15px auto;
+  width: 300px;
+}
+
+.learn-state .state-item {
+  margin: 0 14px;
+  height: 42px;
+  line-height: 42px;
+  float: left;
+  cursor: pointer;
+  font-size: 16px;
+  box-sizing: border-box;
+  color: #333;
+  position: relative;
+}
+
+.learn-state .state-item:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: transparent;
+  border-radius: 6px;
+  bottom: 0;
+  box-sizing: border-box;
+}
+
+.learn-state .state-item:hover, .learn-state .state-item.active {
+  color: #4698FD;
+  font-weight: bold;
+}
+
+.learn-state .state-item:hover:before, .learn-state .state-item.active:before {
+  background-color: #4698FD;
+}
+
+.learn-list {
+  height: calc(100% - 157px);
+  overflow: auto;
+}
+
+.learn-item {
+  height: 237px;
+  background-color: #fff;
+  box-shadow: 0px 0px 6px rgba(237, 237, 237, 0.46);
+  border: 1px solid #F5F5F5;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.learn-item:hover {
+  background: #F5F5F5;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+  border: 1px solid transparent;
+  box-sizing: border-box;
+}
+
+.learn-item:last-child {
+  margin-bottom: 0px;
+}
+
+.learn-item > div {
+  margin: 24px 0 24px 24px;
+}
+
+.learn-pic {
+  width: 220px;
+  height: 189px;
+  float: left;
+}
+
+.learn-pic > img {
+  display: block;
+  height: 100%;
+}
+
+.learn-content {
+  float: left;
+  margin: 0 20px;
+  width: calc(100% - 260px);
+}
+
+.learn-content-refer {
+  padding-top: 14px;
+  height: 92px;
+  border-bottom: 1px dashed #E8E8E8;
+  box-sizing: border-box;
+}
+
+.learn-content-refer .content-tit {
+  color: #999;
+  font-size: 14px;
+  height: 36px;
+  line-height: 36px;
+  position: relative;
+}
+
+.learn-content-refer > h3.content-tit {
+  font-weight: bold;
+  color: #000;
+  font-size: 16px;
+}
+
+.learn-content .content-refer {
+  display: block;
+  width: 57%;
+}
+
+.learn-content .refer-state {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.learn-content .refer-item {
+  float: left;
+  padding-left: 25px;
+  background-position: center left;
+}
+
+.learn-content .refer-item.hours {
+  background-image: url("../images/learn-tot.png");
+  margin-right: 26px;
+  color: #EEAA26;
+}
+
+.learn-content .refer-item.course {
+  background-image: url("../images/learn-num.png");
+  color: #42BAD4;
+}
+
+.learn-chart {
+  margin-top: 18px;
+  height: 61px;
+  line-height: 61px;
+}
+
+.learn-chart .chart {
+  width: 160px;
+  height: 100%;
+  height: 61px;
+  line-height: 61px;
+  float: left;
+}
+
+.learn-chart .chart-progress {
+  height: 61px;
+  width: 61px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.learn-chart .chart-state {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 16px;
+  font-weight: bold;
+}
+
+.learn-chart .chart-state.being {
+  color: #1E63E4;
+}
+
+.learn-chart .chart-state.nostart {
+  color: #999;
+}
+
+.learn-chart .chart-state.finish {
+  color: #62B246;
+}
+
+.learn-chart .chart-refer {
+  float: left;
+}
+
+.learn-chart .chart-refer-item {
+  float: left;
+  color: #999;
+}
+
+.learn-chart .chart-refer-item.timefinish {
+  padding-right: 20px;
+}
+
+.learn-chart .chart-refer-item .learn-num {
+  color: #3A77E7;
+}
+
+.learn-chart .chart-refer-item .learn-num.finish {
+  color: #999;
+}

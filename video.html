@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/video.css">
+    <script src="./js/libs/jquery-1.12.min.js"></script>
+    <title>视频页</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container clearfix">
+            <h2 class="header-tit">江苏省二级建造师继续教育公共知识学习平台</h2>
+            <div class="header-state">
+                <p class="header-exit">退出</p>
+                <p class="header-logined">欢迎你，张山海</p>
+            </div>
+        </div>
+    </div>
+    <div class="container video-container">
+        <div class="video-top" id="videoTop">
+
+        </div>
+        <div class="video-content clearfix">
+            <div class="video-mod ">
+                <div class="video-box" id="video-pic">
+                </div>
+                <div class="video-btn clearfix">
+                    <button class="btn-item preseve">保存时长</button>
+                    <button class="btn-item classafter">课后练习</button>
+                    <button class="btn-item correct">练习故障纠正</button>
+                </div>
+            </div>
+            <div class="video-nav">
+                <h3 class="nav-tit">目录</h3>
+                <div class="video-nav-list">
+                    <ul class="video-list" id="videoList">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="footer">
+        <div class="container">
+            <div class="footer-text">
+                <span class="text">版权所有©江苏省建设教育协会</span>
+                <span class="text">地址：南京市南通路118号茂悦港5号楼8楼</span>
+                <span class="text">邮编：210036</span>
+                <span class="text">苏ICP备17047788号</span>
+                <span class="text">苏公安备：32010602010975号</span>
+            </div>
+        </div>
+    </div> -->
+    <!-- 顶部 -->
+    <script type="text/x-template" id="top-Tmpl">
+        {{#.}}
+          <div class="video clearfix">
+              <div class="video-refer">
+                  <h3 class="video-tit">{{title}}</h3>
+                  <p class="">{{refer}}</p>
+              </div>
+              <div class="video-refer-amount">
+                  <p class="video-amount">
+                      总学时: <span class="amount-tot">{{totnum}}</span>
+                      已学:<span class="amount-learn">{{learnnum}} | {{pernum}}%</span>
+                      上次学习: <span>{{perlearntime}}</span>
+                  </p>
+                  <div class="video-progress">
+                      <div class="progress" style="width:{{pernum}}%"></div>
+                  </div>
+              </div>
+          </div>
+          <p class="video-notice">
+              {{word}}
+          </p>
+        {{/.}}    
+    </script>
+
+    <!--视频部分  -->
+    <script type="text/x-template" id="video-Tmpl">
+        {{#.}}
+         <img src="{{href}}" alt="" />
+        {{/.}}    
+    </script>
+
+    <!--视频导航部分 -->
+    <script type="text/html" id="video-nav-tmpl">
+        {{#.}}
+        <li class="video-item">
+            <div class="video-chapter clearfix">
+                <span class="item-num">{{chapter}}</span>
+                <span class="item-text">{{name}}</span>
+                <i class="video-arrow"></i>
+            </div>
+            <ul class="video-list-sub">
+                {{#section}}
+                <li class="video-item-sub videotab">
+                    <div class="video-chapter-sub">
+                        <span class="">{{sect}}</span>
+                        <span class="sub-text">{{name}}</span>
+                        <i class="video-arrow"></i>
+                    </div>
+                    <ul class="video-list-sub-child">
+                        {{#course}}
+                        <li class="video-item-sub {{type}} videosubtab" data-guid="{{guid}}">
+                            <span class=""> {{courseTime}}</span>
+                            <span class="sub-text">{{train}}</span>
+                        </li>
+                        {{/course}}
+                    </ul>
+                </li>
+                {{/section}}
+            </ul>
+        </li>
+        {{/.}}
+    </script>
+
+    <script src="js/libs/mock.min.js"></script>
+    <script src="./_test/test_video.js"></script>
+    <!-- 工具js -->
+    <script src="./js/libs/mustache.min.js"></script>
+    <script src="js/libs/util.f9x.js"></script>
+    <script src="./js/video.js"></script>
+</body>
+
+</html>
